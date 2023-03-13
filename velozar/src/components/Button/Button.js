@@ -1,3 +1,3 @@
 import style from './Button.module.css';
-const Button = () => <button className={style.btn}>Связаться</button>;
+const Button = ({ text }) => <button className={style.btn}>{text}</button>;
 export default Button;

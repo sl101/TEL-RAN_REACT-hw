@@ -1,11 +1,13 @@
 import style from './Navigation.module.css';
 
-const Navigation = () => {
+const Navigation = ({ nav }) => {
 	return (
 		<nav className={style.nav}>
-			<button className={style.link}>О нас</button>
-			<button className={style.link}>Услуги</button>
-			<button className={style.link}>Аренда</button>
+			{nav.map((el, key) => (
+				<button key={key} className={style.link}>
+					{el}
+				</button>
+			))}
 		</nav>
 	);
 };
