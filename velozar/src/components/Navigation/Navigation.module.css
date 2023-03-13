@@ -1,0 +1,30 @@
+.nav {
+	display: flex;
+	gap: 60px;
+	font-style: normal;
+	color: var(--black-color);
+}
+
+.link {
+	position: relative;
+	padding: 10px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	background-color: transparent;
+	font-size: 14px;
+	transition: border-color var(--hover-time) ease, opacity var(--hover-time) ease;
+	outline: none;
+}
+
+.link:focus {
+	opacity: .4;
+}
+
+.link:hover {
+	border-bottom-color: var(--black-color);
+	opacity: 1;
+}
+
+.link:active {
+	top: 1px;
+}

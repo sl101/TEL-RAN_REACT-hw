@@ -1,0 +1,18 @@
+.service_item {
+	padding: 0 70px;
+	width: 480px;
+	height: 480px;
+	display: flex;
+	flex-direction: column;
+}
+
+.decor {
+	height: 96px;
+	border-bottom: 2px solid var(--white-color);
+	margin-bottom: 30px;
+}
+
+.text {
+	font-size: 32px;
+	color: var(--white-color);
+}

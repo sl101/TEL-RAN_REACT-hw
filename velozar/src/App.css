@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	--black-color: #000000;
+	--text-color: rgba(34, 53, 111, 1);
+	--white-color: #ffffff;
+	--light-color: #f4f9e2;
+	--accent-color: #f9b640;
+	--accent-005: rgba(249, 182, 64, .5);
+	--color-2c1: #0052c1;
+	--color-200: #22356f;
+	--color-600: #62d0df;
+	--color-700: #76b58b;
+
+
+	--hover-time: .4s;
+
+	font-family: 'ABeeZee', sans-serif;
+	font-size: 24px;
+}
+
+h1,
+h2,
+h3 {
+	font-size: inherit;
+	font-weight: normal;
+}
+
+.app {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	font-style: italic;
+	background-color: var(--light-color);
+	color: var(--text-color);
+}

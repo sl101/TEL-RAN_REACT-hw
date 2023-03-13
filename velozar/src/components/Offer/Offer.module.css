@@ -1,0 +1,26 @@
+.offer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-size: 36px;
+	margin-bottom: 27px;
+}
+
+.content {
+	max-width: 600px;
+	margin-left: 170px;
+	margin-right: 160px;
+}
+
+.image {
+	height: auto;
+	object-fit: cover;
+}
+
+.description {
+	line-height: 36px;
+	letter-spacing: 3.2px;
+}

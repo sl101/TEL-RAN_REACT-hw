@@ -1,0 +1,26 @@
+.btn {
+	position: relative;
+	padding: 17px 39px 16px;
+	font-style: italic;
+	font-size: 14px;
+	background-color: var(--accent-color);
+	color: var(--white-color);
+	border: 1px solid transparent;
+	border-radius: 50px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color var(--hover-time) ease, color var(--hover-time) ease;
+}
+
+.btn:focus {
+	background-color: var(--accent-005);
+}
+
+.btn:hover {
+	background-color: var(--accent-color);
+	color: var(--black-color);
+}
+
+.btn:active {
+	top: 1px;
+}

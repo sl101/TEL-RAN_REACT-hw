@@ -1,0 +1,13 @@
+.blog {
+	height: 630px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 70px;
+	background-color: var(--white-color);
+}
+
+.blog q {
+	max-width: 740px;
+}
