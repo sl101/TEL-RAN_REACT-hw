@@ -1,29 +1,16 @@
 import style from './Content.module.css';
 
 const Content = ({
-	content_padding,
-	gap,
-	background,
-	color,
-	flex,
 	title,
 	title_style,
 	description,
+	content_style,
 	description_style,
 	image,
 	alt,
 }) => {
 	return (
-		<section
-			className={style.content}
-			style={{
-				padding: content_padding,
-				gap: gap,
-				flexDirection: flex,
-				backgroundColor: background,
-				color: color,
-			}}
-		>
+		<section className={style.content} style={{ ...content_style }}>
 			<div className={style.inner}>
 				{title_style && (
 					<h1 className={style.title} style={{ ...title_style }}>

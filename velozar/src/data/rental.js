@@ -1,6 +1,8 @@
 import rental_img from './media/rental.jpg';
 export const rental = {
-	flex: 'row-reverse',
+	content_style: {
+		flexDirection: 'row-reverse',
+	},
 	title: 'Прокат велосипедов',
 	description:
 		'У нас вы можете взять на прокат хорошо обслуженные и настроенные велосипеды. Как раз мы находимся в прекрасном парке!',

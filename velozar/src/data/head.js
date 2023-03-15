@@ -1,6 +1,8 @@
 import head_img from './media/head.png';
 export const head = {
-	content_padding: '100px 50px 80px 150px',
+	content_style: {
+		padding: '100px 50px 80px 150px',
+	},
 	title: 'Веломастерская “Велозар”',
 	title_style: {
 		fontSize: '48px',
