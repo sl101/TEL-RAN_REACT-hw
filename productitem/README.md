@@ -9,7 +9,7 @@ const data = [
 
 Необходимо создать компонент ProductItem, который будет отображать данные товара по следующему макету:
 
-    					![task layout](/public/media/hw_layout.png)
+    					![task layout](./public/media/hw_layout.png)
 
 Расположение компонентов (стилизация) остается по желанию.
 
