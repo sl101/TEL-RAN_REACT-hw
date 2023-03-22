@@ -1,0 +1,44 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.app {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+.btn {
+	align-self: start;
+	position: relative;
+	padding: 7px 16px;
+	border: 1px solid gray;
+	box-shadow: 0 0 2px 0 black;
+	border-radius: 5px;
+	background-color: salmon;
+	color: white;
+	font-weight: 500;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.btn:active {
+	top: 1px;
+	box-shadow: 0 0 0 0 transparent;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}

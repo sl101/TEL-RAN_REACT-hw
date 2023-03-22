@@ -1,0 +1,39 @@
+.item {
+	padding: 30px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	border: 1px solid gray;
+	border-radius: 15px;
+	background-color: bisque;
+	box-shadow: 5px 5px 15px 0 grey;
+	color: black;
+	cursor: copy;
+}
+
+
+.conter_block {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.count {
+	width: 50px;
+	text-align: center;
+}
+
+.btn {
+	position: relative;
+	padding: 4px 12px;
+	border: 1px solid gray;
+	box-shadow: 0 0 2px 0 black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:active {
+	top: 1px;
+	box-shadow: 0 0 0 0 transparent;
+}

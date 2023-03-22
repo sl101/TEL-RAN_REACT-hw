@@ -7,7 +7,12 @@ const ServiceList = () => {
 		<section className="services">
 			<ul className={style.list}>
 				{services.map((el, index) => (
-					<Service background={el.background} text={el.text} key={index} />
+					<Service
+						background={el.background}
+						text={el.text}
+						key={index}
+						color={el.color}
+					/>
 				))}
 			</ul>
 		</section>
