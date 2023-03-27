@@ -1,0 +1,16 @@
+.close_button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	width: 28px;
+	height: 28px;
+	background-color: var(--color-accent);
+	border: 1px solid var(--color-black);
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	transition: opacity .2s ease;
+	opacity: 0;
+	visibility: hidden;
+}

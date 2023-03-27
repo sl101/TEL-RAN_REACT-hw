@@ -1,0 +1,77 @@
+.form {
+	padding: 32px 60px 33px;
+	margin-bottom: 43px;
+	display: grid;
+	grid-template-columns: 250px 250px 230px 166px;
+	grid-template-areas:
+		"day importance button button"
+		"thema thema  button button";
+	column-gap: 24px;
+	row-gap: 34px;
+	background-color: var(--color-light);
+	border: none;
+	border-radius: 20px;
+}
+
+.select,
+.thema {
+	padding: 7px;
+	height: 40px;
+	border: 1px solid var(--color-black);
+	font-size: 20px;
+}
+
+.select {
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url("./media/arrow.png");
+	background-repeat: no-repeat;
+	background-position: right .5em top 50%;
+	background-size: 25px;
+}
+
+.select_day {
+	grid-area: day;
+
+}
+
+.select_weight {
+	grid-area: importance;
+}
+
+.thema {
+	grid-area: thema;
+}
+
+.btn {
+	position: relative;
+	width: 163px;
+	height: 45px;
+	font-size: 20px;
+	grid-area: button;
+	justify-self: end;
+	align-self: end;
+	background-color: var(--color-brand);
+	color: var(--color-white);
+	border: 1px solid black;
+	border-radius: 23px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color var(--hover-time) ease, border-color var(--hover-time) ease;
+}
+
+
+.btn:focus {
+	border-color: var(--color-brand);
+}
+
+.btn:hover {
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+
+.btn:active {
+	top: 1px;
+}

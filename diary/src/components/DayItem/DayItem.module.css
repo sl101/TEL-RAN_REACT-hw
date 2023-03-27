@@ -1,0 +1,20 @@
+.day_item {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	background-color: var(--color-light);
+	border-radius: 20px;
+}
+
+.day_mark {
+	width: 80px;
+	text-transform: uppercase;
+	font-size: 30px;
+	background-color: var(--color-dark);
+	color: var(--color-white);
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

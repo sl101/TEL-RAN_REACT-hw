@@ -9,6 +9,10 @@ const ProductItem = ({
 	increase,
 	decrease,
 }) => {
+	function stopPropagation(e) {
+		e.stopPropagation();
+	}
+
 	return (
 		<li
 			className={s.item}
@@ -18,11 +22,21 @@ const ProductItem = ({
 			<h2 className={s.title}>{name}</h2>
 			<span className={s.price}>Price: {price}</span>
 			<div className={s.conter_block}>
-				<button className={s.btn} onClick={() => increase(id)} title="increase">
+				<button
+					className={s.btn}
+					onDoubleClick={stopPropagation}
+					onClick={() => increase(id)}
+					title="increase"
+				>
 					+
 				</button>
 				<span className={s.count}>{count}</span>
-				<button className={s.btn} onClick={() => decrease(id)} title="decrease">
+				<button
+					className={s.btn}
+					onDoubleClick={stopPropagation}
+					onClick={() => decrease(id)}
+					title="decrease"
+				>
 					-
 				</button>
 			</div>

@@ -1,0 +1,9 @@
+.task_list {
+	padding: 11px 32px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(3, 286px);
+	grid-auto-rows: 47px;
+	column-gap: 22px;
+	row-gap: 14px;
+}

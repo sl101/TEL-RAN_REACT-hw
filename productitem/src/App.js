@@ -15,11 +15,11 @@ function App() {
 	const addProduct = () => {
 		const getDescr = prompt('укажите название и цену товара');
 		if (getDescr) {
-			const data = getDescr.split(' ');
+			const [name, price = 0] = getDescr.split(' ');
 			const obj = {
 				id: Date.now(),
-				name: data[0],
-				price: (data[1] = 0),
+				name: name,
+				price: price,
 				count: 1,
 			};
 			setProducts([...products, obj]);
@@ -31,20 +31,21 @@ function App() {
 	};
 
 	const increase = (id) => {
-		const tempProducts = [...products];
-		tempProducts.forEach((el) => {
+		const tempProducts = products.map((el) => {
 			if (el.id === id) {
 				el.count++;
 			}
+			return el;
 		});
 		setProducts(tempProducts);
 	};
+
 	const decrease = (id) => {
-		const tempProducts = [...products];
-		tempProducts.forEach((el) => {
+		const tempProducts = products.map((el) => {
 			if (el.id === id) {
 				el.count--;
 			}
+			return el;
 		});
 		setProducts(tempProducts);
 	};

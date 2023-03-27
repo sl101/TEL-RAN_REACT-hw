@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	--color-white: #ffffff;
+	--color-light: #ecf0f1;
+	--color-black: #000000;
+	--color-dark: #34495e;
+	--color-brand: #1abc9c;
+	--color-accent: #e74c3c;
+
+	--hover-time: 0.4s;
+
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+.app {
+	font-family: 'Inter', sans-serif;
+	font-size: 30px;
+	padding: 80px 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: var(--color-brand);
+}
+
+.container {
+	padding: 0 15px;
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.task_item:hover .close_task,
+.day_item:hover .close_day {
+	opacity: 1;
+	visibility: visible;
+}

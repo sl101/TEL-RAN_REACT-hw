@@ -1,0 +1,17 @@
+.task_item {
+  position: relative;
+  padding: 4px 17px;
+  color: var(--color-white);
+}
+
+.task_content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+.task_content p {
+  height: 47px;
+  line-height: 47px;
+}
