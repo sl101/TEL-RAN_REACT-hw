@@ -2,31 +2,32 @@ import CloseButton from '../CloseButton/CloseButton';
 import TaskList from '../TaskList/TaskList';
 import s from './DayItem.module.css';
 import { useState } from 'react';
+import { btn_style } from '../../data/data';
 
 const DayItem = ({ day, tasks, deleteDay, deleteTask }) => {
 	const dayTask = tasks.filter((el) => el.day == day.dayValue);
 
-	let btn_style = {
-		opacity: '0',
-		visibility: 'hidden',
-	};
 	let [opacity, setOpasity] = useState(btn_style);
 
 	const handleMouseOver = (event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseover') {
-			btn_style.opacity = '1';
-			btn_style.visibility = 'visible';
-			setOpasity(btn_style);
+			const tempOpacity = {
+				opacity: 1,
+				visibility: 'visible',
+			};
+			setOpasity(tempOpacity);
 		}
 	};
 
 	const handleMouseOut = (event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseout') {
-			btn_style.opacity = '0';
-			btn_style.visibility = 'hidden';
-			setOpasity(btn_style);
+			const tempOpacity = {
+				opacity: 0,
+				visibility: 'hidden',
+			};
+			setOpasity(tempOpacity);
 		}
 	};
 

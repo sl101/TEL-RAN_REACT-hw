@@ -91,6 +91,7 @@ select,
 
 .btn:hover {
 	background-color: var(--color-accent);
+	border-color: var(--color-black);
 }
 
 .btn:active {
