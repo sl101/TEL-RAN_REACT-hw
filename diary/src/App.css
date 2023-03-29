@@ -36,11 +36,28 @@ li {
 .container {
 	padding: 0 15px;
 	max-width: 1120px;
+	width: 100%;
 	margin: 0 auto;
 }
 
-.task_item:hover .close_task,
-.day_item:hover .close_day {
+/* .day_item:hover .close_day {
 	opacity: 1;
 	visibility: visible;
-}
+} */
+
+/* .task_item:hover .close_task {
+	opacity: 1;
+	visibility: visible;
+} */
+
+/* .day_item:hover .close_btn {
+	opacity: 1;
+	visibility: visible;
+} */
+
+/* .task_item:hover .close_btn { */
+/* opacity: 0;
+	visibility: hidden; */
+/* opacity: 1;
+	visibility: visible; */
+/* } */

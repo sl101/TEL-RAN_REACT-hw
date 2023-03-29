@@ -1,48 +1,72 @@
 .form {
-	padding: 32px 60px 33px;
+	padding: 30px 60px;
 	margin-bottom: 43px;
-	display: grid;
-	grid-template-columns: 250px 250px 230px 166px;
-	grid-template-areas:
-		"day importance button button"
-		"thema thema  button button";
-	column-gap: 24px;
-	row-gap: 34px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: space-between;
 	background-color: var(--color-light);
 	border: none;
 	border-radius: 20px;
 }
 
-.select,
+.form_wrapper {
+	max-width: 545px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 34px;
+}
+
+.select_wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 24px;
+	width: 100%;
+}
+
+select,
 .thema {
-	padding: 7px;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	cursor: pointer;
+	border: none;
+	width: 100%;
 	height: 40px;
-	border: 1px solid var(--color-black);
+	padding: 7px;
 	font-size: 20px;
 }
 
-.select {
-	cursor: pointer;
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	background-image: url("./media/arrow.png");
-	background-repeat: no-repeat;
-	background-position: right .5em top 50%;
-	background-size: 25px;
+.thema {
+	outline: auto;
 }
 
+.select_weight,
 .select_day {
-	grid-area: day;
-
+	position: relative;
+	max-width: 250px;
+	width: 100%;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-black);
 }
 
-.select_weight {
-	grid-area: importance;
+.select_day::after,
+.select_weight::after {
+	content: url('./media/arrow.png');
+	background-color: var(--color-white);
+	position: absolute;
+	right: 0;
+	padding: 3px 10px;
+	border-left: 1px solid var(--color-black);
+	cursor: pointer;
+	pointer-events: none;
 }
 
 .thema {
-	grid-area: thema;
+	border: 1px solid var(--color-black);
 }
 
 .btn {
@@ -50,7 +74,6 @@
 	width: 163px;
 	height: 45px;
 	font-size: 20px;
-	grid-area: button;
 	justify-self: end;
 	align-self: end;
 	background-color: var(--color-brand);
@@ -62,16 +85,29 @@
 	transition: background-color var(--hover-time) ease, border-color var(--hover-time) ease;
 }
 
-
 .btn:focus {
 	border-color: var(--color-brand);
 }
 
 .btn:hover {
 	background-color: var(--color-accent);
-	border-color: var(--color-accent);
 }
 
 .btn:active {
 	top: 1px;
+}
+
+@media (max-width:680px) {
+	.form {
+		padding: 30px 20px;
+	}
+
+	.form_wrapper {
+		max-width: 100%;
+	}
+
+	.select_weight,
+	.select_day {
+		max-width: 100%;
+	}
 }

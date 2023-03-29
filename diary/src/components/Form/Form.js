@@ -12,34 +12,38 @@ const Form = ({ formSubmit, weekDays, taskWeights }) => {
 
 	return (
 		<form className={s.form} onSubmit={handleSubmit}>
-			<select className={`${s.select} ${s.select_day}`} name="day" required>
-				{weekDays.map((el, index) => (
-					<option key={index} value={el.mark}>
-						{el.value}
-					</option>
-				))}
-			</select>
+			<div className={s.form_wrapper}>
+				<div className={s.select_wrapper}>
+					<div className={s.select_day}>
+						<select name="day" required>
+							{weekDays.map((el, index) => (
+								<option key={index} value={el.mark}>
+									{el.value}
+								</option>
+							))}
+						</select>
+					</div>
 
-			<select
-				className={`${s.select} ${s.select_weight}`}
-				name="weight"
-				required
-			>
-				{taskWeights.map((el, index) => (
-					<option key={index} value={el.mark}>
-						{el.value}
-					</option>
-				))}
-			</select>
-			<input
-				className={s.thema}
-				onChange={(e) => setThema(e.target.value)}
-				type="text"
-				name="thema"
-				value={thema}
-				placeholder="Описание"
-				required
-			/>
+					<div className={s.select_weight}>
+						<select name="weight" required>
+							{taskWeights.map((el, index) => (
+								<option key={index} value={el.mark}>
+									{el.value}
+								</option>
+							))}
+						</select>
+					</div>
+				</div>
+				<input
+					className={s.thema}
+					onChange={(e) => setThema(e.target.value)}
+					type="text"
+					name="thema"
+					value={thema}
+					placeholder="Описание"
+					required
+				/>
+			</div>
 			<button className={s.btn}>Добавить</button>
 		</form>
 	);
