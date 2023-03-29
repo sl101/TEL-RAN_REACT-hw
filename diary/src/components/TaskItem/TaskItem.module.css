@@ -17,3 +17,10 @@
 	height: 47px;
 	line-height: 47px;
 }
+
+@media (max-width:760px) {
+	.task_item {
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+}

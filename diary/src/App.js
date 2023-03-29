@@ -49,6 +49,16 @@ function App() {
 		setTasks(tempTasks);
 	};
 
+	const changePriority = (id) => {
+		const tempTasks = tasks.map((el) => {
+			if (el.id === id) {
+				el.weight = el.weight === 1 ? 2 : 1;
+			}
+			return el;
+		});
+		setTasks(tempTasks);
+	};
+
 	return (
 		<div className="app">
 			<div className="container">
@@ -62,6 +72,7 @@ function App() {
 					days={days}
 					deleteDay={deleteDay}
 					deleteTask={deleteTask}
+					changePriority={changePriority}
 				/>
 			</div>
 		</div>

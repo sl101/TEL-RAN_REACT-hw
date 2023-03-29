@@ -1,7 +1,7 @@
 import s from './DayList.module.css';
 import DayItem from './../DayItem/DayItem';
 
-const DayList = ({ tasks, days, deleteDay, deleteTask }) => {
+const DayList = ({ tasks, days, deleteDay, deleteTask, changePriority }) => {
 	return (
 		<ul className={s.day_list}>
 			{days.map((elem, index) => (
@@ -11,6 +11,7 @@ const DayList = ({ tasks, days, deleteDay, deleteTask }) => {
 					tasks={tasks}
 					deleteDay={deleteDay}
 					deleteTask={deleteTask}
+					changePriority={changePriority}
 				/>
 			))}
 		</ul>

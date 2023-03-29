@@ -4,7 +4,7 @@ import s from './DayItem.module.css';
 import { useState } from 'react';
 import { btn_style } from '../../data/data';
 
-const DayItem = ({ day, tasks, deleteDay, deleteTask }) => {
+const DayItem = ({ day, tasks, deleteDay, deleteTask, changePriority }) => {
 	const dayTask = tasks.filter((el) => el.day == day.dayValue);
 
 	let [opacity, setOpasity] = useState(btn_style);
@@ -40,13 +40,12 @@ const DayItem = ({ day, tasks, deleteDay, deleteTask }) => {
 					onMouseOver={handleMouseOver}
 				>
 					<p className={s.day_mark}>{day.dayValue}</p>
-					<TaskList dayTask={dayTask} deleteTask={deleteTask} />
-					<CloseButton
-						opacity={opacity}
-						close="close_day"
-						deleteAction={deleteDay}
-						id={day.id}
+					<TaskList
+						dayTask={dayTask}
+						deleteTask={deleteTask}
+						changePriority={changePriority}
 					/>
+					<CloseButton opacity={opacity} deleteAction={deleteDay} id={day.id} />
 				</li>
 			)}
 		</>

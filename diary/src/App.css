@@ -25,7 +25,7 @@ li {
 	font-family: 'Inter', sans-serif;
 	font-size: 30px;
 	padding: 80px 0;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -39,25 +39,3 @@ li {
 	width: 100%;
 	margin: 0 auto;
 }
-
-/* .day_item:hover .close_day {
-	opacity: 1;
-	visibility: visible;
-} */
-
-/* .task_item:hover .close_task {
-	opacity: 1;
-	visibility: visible;
-} */
-
-/* .day_item:hover .close_btn {
-	opacity: 1;
-	visibility: visible;
-} */
-
-/* .task_item:hover .close_btn { */
-/* opacity: 0;
-	visibility: hidden; */
-/* opacity: 1;
-	visibility: visible; */
-/* } */

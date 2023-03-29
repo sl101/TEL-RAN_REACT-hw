@@ -2,7 +2,7 @@ import CloseButton from '../CloseButton/CloseButton';
 import s from './TaskItem.module.css';
 import { useState } from 'react';
 
-const TaskItem = ({ id, weight, thema, deleteTask }) => {
+const TaskItem = ({ id, weight, thema, deleteTask, changePriority }) => {
 	const itemColor = weight == 1 ? 'var(--color-accent)' : 'var(--color-brand)';
 	let btn_style = {
 		opacity: '0',
@@ -30,19 +30,16 @@ const TaskItem = ({ id, weight, thema, deleteTask }) => {
 
 	return (
 		<li
+			title="change priority on doubleclick"
 			className={`task_item ${s.task_item}`}
 			style={{ backgroundColor: itemColor }}
 			onMouseOut={handleMouseOut}
 			onMouseOver={handleMouseOver}
+			onDoubleClick={() => changePriority(id)}
 		>
 			<div className={s.task_content}>
 				<p>{thema}</p>
-				<CloseButton
-					opacity={opacity}
-					close="close_task"
-					deleteAction={deleteTask}
-					id={id}
-				/>
+				<CloseButton opacity={opacity} deleteAction={deleteTask} id={id} />
 			</div>
 		</li>
 	);
