@@ -11,8 +11,8 @@
 
 @media (max-width:760px) {
 	.task_list {
-		padding: 11px 18px 11px 8px;
+		padding: 40px 20px;
 		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
+		row-gap: 30px;
 	}
 }
