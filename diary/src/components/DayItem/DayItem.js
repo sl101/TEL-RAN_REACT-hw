@@ -3,7 +3,7 @@ import TaskList from '../TaskList/TaskList';
 import s from './DayItem.module.css';
 import { useState } from 'react';
 
-const DayItem = ({ day, tasks, deleteDay, changePriority }) => {
+const DayItem = ({ day, tasks, deleteDay }) => {
 	const dayTask = tasks.filter((el) => el.day == day.dayValue);
 
 	let [opacity, setOpasity] = useState();
@@ -39,7 +39,7 @@ const DayItem = ({ day, tasks, deleteDay, changePriority }) => {
 					onMouseOver={handleMouseOver}
 				>
 					<p className={s.day_mark}>{day.dayValue}</p>
-					<TaskList dayTask={dayTask} changePriority={changePriority} />
+					<TaskList dayTask={dayTask} />
 					<CloseButton opacity={opacity} deleteAction={deleteDay} id={day.id} />
 				</li>
 			)}

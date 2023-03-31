@@ -2,32 +2,35 @@ import CloseButton from '../CloseButton/CloseButton';
 import s from './TaskItem.module.css';
 import { useContext, useState } from 'react';
 import { RemoveTaskContext } from '../../context/RemoveTaskContext';
+import { TaskPriorityContext } from '../../context/TaskPriorityContext';
 
-const TaskItem = ({ id, weight, thema, changePriority }) => {
+const TaskItem = ({ id, weight, thema }) => {
 	const { removeTask } = useContext(RemoveTaskContext);
+	const { changePriority } = useContext(TaskPriorityContext);
 
 	const itemColor = weight == 1 ? 'var(--color-accent)' : 'var(--color-brand)';
-	let btn_style = {
-		opacity: '0',
-		visibility: 'hidden',
-	};
-	let [opacity, setOpasity] = useState(btn_style);
+
+	let [opacity, setOpasity] = useState();
 
 	const handleMouseOver = (event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseover') {
-			btn_style.opacity = '1';
-			btn_style.visibility = 'visible';
-			setOpasity(btn_style);
+			const tempOpacity = {
+				opacity: 1,
+				visibility: 'visible',
+			};
+			setOpasity(tempOpacity);
 		}
 	};
 
 	const handleMouseOut = (event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseout') {
-			btn_style.opacity = '0';
-			btn_style.visibility = 'hidden';
-			setOpasity(btn_style);
+			const tempOpacity = {
+				opacity: 0,
+				visibility: 'hidden',
+			};
+			setOpasity(tempOpacity);
 		}
 	};
 
