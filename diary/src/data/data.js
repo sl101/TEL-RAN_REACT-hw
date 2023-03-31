@@ -54,8 +54,3 @@ export const taskWeights = [
 		value: 'не важно',
 	},
 ];
-
-export let btn_style = {
-	opacity: 0,
-	visibility: 'hidden',
-};

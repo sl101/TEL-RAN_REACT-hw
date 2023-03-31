@@ -1,8 +1,11 @@
 import CloseButton from '../CloseButton/CloseButton';
 import s from './TaskItem.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { RemoveTaskContext } from '../../context/RemoveTaskContext';
 
-const TaskItem = ({ id, weight, thema, deleteTask, changePriority }) => {
+const TaskItem = ({ id, weight, thema, changePriority }) => {
+	const { removeTask } = useContext(RemoveTaskContext);
+
 	const itemColor = weight == 1 ? 'var(--color-accent)' : 'var(--color-brand)';
 	let btn_style = {
 		opacity: '0',
@@ -39,7 +42,7 @@ const TaskItem = ({ id, weight, thema, deleteTask, changePriority }) => {
 		>
 			<div className={s.task_content}>
 				<p>{thema}</p>
-				<CloseButton opacity={opacity} deleteAction={deleteTask} id={id} />
+				<CloseButton opacity={opacity} deleteAction={removeTask} id={id} />
 			</div>
 		</li>
 	);

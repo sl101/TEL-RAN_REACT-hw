@@ -2,12 +2,11 @@ import CloseButton from '../CloseButton/CloseButton';
 import TaskList from '../TaskList/TaskList';
 import s from './DayItem.module.css';
 import { useState } from 'react';
-import { btn_style } from '../../data/data';
 
-const DayItem = ({ day, tasks, deleteDay, deleteTask, changePriority }) => {
+const DayItem = ({ day, tasks, deleteDay, changePriority }) => {
 	const dayTask = tasks.filter((el) => el.day == day.dayValue);
 
-	let [opacity, setOpasity] = useState(btn_style);
+	let [opacity, setOpasity] = useState();
 
 	const handleMouseOver = (event) => {
 		event.stopPropagation();
@@ -40,11 +39,7 @@ const DayItem = ({ day, tasks, deleteDay, deleteTask, changePriority }) => {
 					onMouseOver={handleMouseOver}
 				>
 					<p className={s.day_mark}>{day.dayValue}</p>
-					<TaskList
-						dayTask={dayTask}
-						deleteTask={deleteTask}
-						changePriority={changePriority}
-					/>
+					<TaskList dayTask={dayTask} changePriority={changePriority} />
 					<CloseButton opacity={opacity} deleteAction={deleteDay} id={day.id} />
 				</li>
 			)}

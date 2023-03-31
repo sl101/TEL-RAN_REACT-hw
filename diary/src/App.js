@@ -3,6 +3,7 @@ import DayList from './components/DayList/DayList';
 import Form from './components/Form/Form';
 import { useState } from 'react';
 import { weekDays, taskWeights } from './data/data';
+import { RemoveTaskContext } from './context/RemoveTaskContext';
 
 function App() {
 	const [days, setDays] = useState([]);
@@ -44,7 +45,7 @@ function App() {
 		const tempDays = days.filter((el) => el.id != id);
 		setDays(tempDays);
 	};
-	const deleteTask = (id) => {
+	const removeTask = (id) => {
 		const tempTasks = tasks.filter((el) => el.id != id);
 		setTasks(tempTasks);
 	};
@@ -67,13 +68,14 @@ function App() {
 					weekDays={weekDays}
 					taskWeights={taskWeights}
 				/>
-				<DayList
-					tasks={tasks}
-					days={days}
-					deleteDay={deleteDay}
-					deleteTask={deleteTask}
-					changePriority={changePriority}
-				/>
+				<RemoveTaskContext.Provider value={{ removeTask }}>
+					<DayList
+						tasks={tasks}
+						days={days}
+						deleteDay={deleteDay}
+						changePriority={changePriority}
+					/>
+				</RemoveTaskContext.Provider>
 			</div>
 		</div>
 	);
