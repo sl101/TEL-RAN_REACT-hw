@@ -8,7 +8,7 @@ const TaskItem = ({ id, weight, thema }) => {
 	const { removeTask } = useContext(RemoveTaskContext);
 	const { changePriority } = useContext(TaskPriorityContext);
 
-	const itemColor = weight == 1 ? 'var(--color-accent)' : 'var(--color-brand)';
+	const itemColor = weight === 1 ? 'var(--color-accent)' : 'var(--color-brand)';
 
 	let [opacity, setOpasity] = useState();
 

@@ -4,7 +4,7 @@ import s from './DayItem.module.css';
 import { useState } from 'react';
 
 const DayItem = ({ day, tasks, deleteDay }) => {
-	const dayTask = tasks.filter((el) => el.day == day.dayValue);
+	const dayTask = tasks.filter((el) => el.day === day.dayCount);
 
 	let [opacity, setOpasity] = useState();
 

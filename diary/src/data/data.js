@@ -40,17 +40,4 @@ export const weekDays = [
 		value: 'Воскресенье',
 	},
 ];
-export const taskWeights = [
-	{
-		mark: '',
-		value: 'Выберите важность',
-	},
-	{
-		mark: 1,
-		value: 'важно',
-	},
-	{
-		mark: 2,
-		value: 'не важно',
-	},
-];
+export const taskWeights = ['Выберите важность', 'важно', 'не важно'];

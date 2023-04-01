@@ -1,13 +1,10 @@
-import { useState } from 'react';
+import { taskWeights } from '../../data/data';
 import s from './Form.module.css';
 
-const Form = ({ formSubmit, weekDays, taskWeights }) => {
-	const [thema, setThema] = useState('');
-
+const Form = ({ formSubmit, weekDays }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		formSubmit(e.target);
-		setThema('');
 	};
 
 	return (
@@ -27,8 +24,8 @@ const Form = ({ formSubmit, weekDays, taskWeights }) => {
 					<div className={s.select_weight}>
 						<select name="weight" required>
 							{taskWeights.map((el, index) => (
-								<option key={index} value={el.mark}>
-									{el.value}
+								<option key={index} value={index}>
+									{el}
 								</option>
 							))}
 						</select>
@@ -36,10 +33,8 @@ const Form = ({ formSubmit, weekDays, taskWeights }) => {
 				</div>
 				<input
 					className={s.thema}
-					onChange={(e) => setThema(e.target.value)}
 					type="text"
 					name="thema"
-					value={thema}
 					placeholder="Описание"
 					required
 				/>

@@ -2,7 +2,7 @@ import './App.css';
 import DayList from './components/DayList/DayList';
 import Form from './components/Form/Form';
 import { useState } from 'react';
-import { weekDays, taskWeights } from './data/data';
+import { weekDays } from './data/data';
 import { RemoveTaskContext } from './context/RemoveTaskContext';
 import { TaskPriorityContext } from './context/TaskPriorityContext';
 
@@ -18,17 +18,6 @@ function App() {
 			dayCount: day.value,
 			dayValue: weekDays[day.value].option,
 		};
-		const dayWeight = taskWeights[weight.value].mark;
-
-		const task = {
-			id: Date.now(),
-			day: shortDay.dayValue,
-			weight: dayWeight,
-			thema: thema.value,
-		};
-
-		day.selectedIndex = 0;
-		weight.selectedIndex = 0;
 
 		const daysCount = days.map((el) => el.dayCount);
 
@@ -39,15 +28,26 @@ function App() {
 			setDays(tempDays);
 		}
 
+		const task = {
+			id: Date.now(),
+			day: day.value,
+			weight: weight.value,
+			thema: thema.value,
+		};
+
 		setTasks([...tasks, task]);
+
+		day.selectedIndex = 0;
+		weight.selectedIndex = 0;
+		thema.value = '';
 	};
 
 	const deleteDay = (id) => {
-		const tempDays = days.filter((el) => el.id != id);
+		const tempDays = days.filter((el) => el.id !== id);
 		setDays(tempDays);
 	};
 	const removeTask = (id) => {
-		const tempTasks = tasks.filter((el) => el.id != id);
+		const tempTasks = tasks.filter((el) => el.id !== id);
 		setTasks(tempTasks);
 	};
 
@@ -64,11 +64,7 @@ function App() {
 	return (
 		<div className="app">
 			<div className="container">
-				<Form
-					formSubmit={formSubmit}
-					weekDays={weekDays}
-					taskWeights={taskWeights}
-				/>
+				<Form formSubmit={formSubmit} weekDays={weekDays} />
 				<RemoveTaskContext.Provider value={{ removeTask }}>
 					<TaskPriorityContext.Provider value={{ changePriority }}>
 						<DayList tasks={tasks} days={days} deleteDay={deleteDay} />
