@@ -1,3 +1,5 @@
+# - [Project Diary](https://sl101.github.io/TEL-RAN_REACT-hw)
+
 ## Используя библиотеку React, необходимо сверстать макет согласно макету.
 
 ![task layout](./assets/maket.png)
