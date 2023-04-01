@@ -6,7 +6,7 @@ import { useState } from 'react';
 const DayItem = ({ day, tasks, deleteDay }) => {
 	const dayTask = tasks.filter((el) => el.day === day.dayCount);
 
-	let [opacity, setOpasity] = useState();
+	let [opacity, setOpasity] = useState({ opacity: 0, visibility: 'hidden' });
 
 	const handleMouseOver = (event) => {
 		event.stopPropagation();
@@ -40,7 +40,11 @@ const DayItem = ({ day, tasks, deleteDay }) => {
 				>
 					<p className={s.day_mark}>{day.dayValue}</p>
 					<TaskList dayTask={dayTask} />
-					<CloseButton opacity={opacity} deleteAction={deleteDay} id={day.id} />
+					<CloseButton
+						opacity={opacity}
+						deleteAction={deleteDay}
+						id={day.dayCount}
+					/>
 				</li>
 			)}
 		</>

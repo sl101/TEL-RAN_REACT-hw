@@ -31,7 +31,7 @@ function App() {
 		const task = {
 			id: Date.now(),
 			day: day.value,
-			weight: weight.value,
+			weight: +weight.value,
 			thema: thema.value,
 		};
 
@@ -42,10 +42,13 @@ function App() {
 		thema.value = '';
 	};
 
-	const deleteDay = (id) => {
-		const tempDays = days.filter((el) => el.id !== id);
+	const deleteDay = (day) => {
+		const tempDays = days.filter((el) => el.dayCount !== day);
+		const tempTasks = tasks.filter((el) => el.day !== day);
 		setDays(tempDays);
+		setTasks(tempTasks);
 	};
+
 	const removeTask = (id) => {
 		const tempTasks = tasks.filter((el) => el.id !== id);
 		setTasks(tempTasks);

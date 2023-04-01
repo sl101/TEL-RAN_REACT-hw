@@ -1,6 +1,6 @@
 import CloseButton from '../CloseButton/CloseButton';
 import s from './TaskItem.module.css';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { RemoveTaskContext } from '../../context/RemoveTaskContext';
 import { TaskPriorityContext } from '../../context/TaskPriorityContext';
 
@@ -10,10 +10,9 @@ const TaskItem = ({ id, weight, thema }) => {
 
 	const itemColor = weight === 1 ? 'var(--color-accent)' : 'var(--color-brand)';
 
-	let [opacity, setOpasity] = useState();
+	let [opacity, setOpasity] = useState({ opacity: 0, visibility: 'hidden' });
 
 	const handleMouseOver = (event) => {
-		event.stopPropagation();
 		if (event.type === 'mouseover') {
 			const tempOpacity = {
 				opacity: 1,
@@ -24,7 +23,6 @@ const TaskItem = ({ id, weight, thema }) => {
 	};
 
 	const handleMouseOut = (event) => {
-		event.stopPropagation();
 		if (event.type === 'mouseout') {
 			const tempOpacity = {
 				opacity: 0,
@@ -51,4 +49,4 @@ const TaskItem = ({ id, weight, thema }) => {
 	);
 };
 
-export default TaskItem;
+export default React.memo(TaskItem);
