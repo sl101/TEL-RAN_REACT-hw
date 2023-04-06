@@ -1,7 +1,8 @@
-import { taskWeights } from '../../data/data';
+import { taskWeights, weekDays } from '../../data/data';
 import s from './Form.module.css';
+import React from 'react';
 
-const Form = ({ formSubmit, weekDays }) => {
+const Form = ({ formSubmit }) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		formSubmit(e.target);
@@ -44,4 +45,4 @@ const Form = ({ formSubmit, weekDays }) => {
 	);
 };
 
-export default Form;
+export default React.memo(Form);

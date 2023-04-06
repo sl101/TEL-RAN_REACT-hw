@@ -56,10 +56,10 @@ select,
 .select_day::after,
 .select_weight::after {
 	content: url('./media/arrow.png');
-	background-color: var(--color-white);
 	position: absolute;
-	right: 0;
 	padding: 3px 10px;
+	right: 0;
+	background-color: var(--color-white);
 	border-left: 1px solid var(--color-black);
 	cursor: pointer;
 	pointer-events: none;

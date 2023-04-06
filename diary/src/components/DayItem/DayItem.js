@@ -1,34 +1,35 @@
 import CloseButton from '../CloseButton/CloseButton';
 import TaskList from '../TaskList/TaskList';
 import s from './DayItem.module.css';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 const DayItem = ({ day, tasks, deleteDay }) => {
 	const dayTask = tasks.filter((el) => el.day === day.dayCount);
+	const sortedDayTask = [...dayTask].sort((a, b) => a.weight - b.weight);
 
-	let [opacity, setOpasity] = useState({ opacity: 0, visibility: 'hidden' });
+	let [opacity, setOpacity] = useState({ opacity: 0, visibility: 'hidden' });
 
-	const handleMouseOver = (event) => {
+	const handleMouseOver = useCallback((event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseover') {
 			const tempOpacity = {
 				opacity: 1,
 				visibility: 'visible',
 			};
-			setOpasity(tempOpacity);
+			setOpacity(tempOpacity);
 		}
-	};
+	}, []);
 
-	const handleMouseOut = (event) => {
+	const handleMouseOut = useCallback((event) => {
 		event.stopPropagation();
 		if (event.type === 'mouseout') {
 			const tempOpacity = {
 				opacity: 0,
 				visibility: 'hidden',
 			};
-			setOpasity(tempOpacity);
+			setOpacity(tempOpacity);
 		}
-	};
+	}, []);
 
 	return (
 		<>
@@ -39,7 +40,7 @@ const DayItem = ({ day, tasks, deleteDay }) => {
 					onMouseOver={handleMouseOver}
 				>
 					<p className={s.day_mark}>{day.dayValue}</p>
-					<TaskList dayTask={dayTask} />
+					<TaskList dayTask={sortedDayTask} />
 					<CloseButton
 						opacity={opacity}
 						deleteAction={deleteDay}
