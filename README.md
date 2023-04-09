@@ -1,1 +1,1 @@
-- [Project Diary](https://sl101.github.io/TEL-RAN_REACT-hw)
+- [active project](https://sl101.github.io/TEL-RAN_REACT-hw)
