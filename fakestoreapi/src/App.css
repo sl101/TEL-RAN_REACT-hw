@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sarabun:wght@400;700&display=swap');
+
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 
 	--black-color: #000;
+	--black-900: #999999;
 	--white-color: #fff;
 
 	--hover-time: .4s;
@@ -14,9 +18,26 @@ li {
 	list-style: none;
 }
 
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+}
+
+
+
 .container {
 	max-width: 1430px;
 
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.app {
+	margin: 0 auto;
+	max-width: 1920px;
+	min-height: 101vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

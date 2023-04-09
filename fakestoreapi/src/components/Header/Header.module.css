@@ -1,0 +1,34 @@
+.header {
+	padding: 20px 0;
+}
+
+.header_nav,
+.menu_list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+
+.logo {
+	width: 60px;
+	height: 60px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+	background-color: salmon;
+
+	cursor: pointer;
+}
+
+.logo span {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 16px;
+	cursor: pointer;
+}
