@@ -10,7 +10,6 @@ const ProductsList = () => {
 		getProducts(setProducts);
 	}, []);
 
-	console.log(products);
 	return (
 		<div className={s.products_list_wrapper}>
 			<div className="container">

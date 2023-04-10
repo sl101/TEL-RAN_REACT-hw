@@ -1,6 +1,7 @@
 .products_item {
 	padding: 15px 15px 30px;
 	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -12,6 +13,8 @@
 	background-color: var(--brand-light);
 
 	overflow: hidden;
+	transition: all var(--hover-time) ease;
+
 }
 
 .product_title {
@@ -38,7 +41,6 @@
 	border-radius: 15px;
 	transform: translateY(100%);
 	transition: transform var(--hover-time) ease;
-
 }
 
 .products_item:hover .hover_wrapper {
@@ -60,10 +62,11 @@
 	color: var(--white-color);
 
 	cursor: pointer;
-
+	outline: none;
 	transition: border-color var(--hover-time) ease, color var(--hover-time) ease;
 
 }
+
 
 .open_card:hover {
 	border-color: var(--brand-color);

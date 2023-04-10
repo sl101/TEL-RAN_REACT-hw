@@ -6,3 +6,10 @@ export const getProducts = (callback) => {
 		.then((data) => callback(data))
 		.catch((error) => console.log(error));
 };
+
+export const getProduct = (id, callback) => {
+	fetch(`${url}/${id}`)
+		.then((resp) => resp.json())
+		.then((data) => callback(data))
+		.catch((error) => console.log(error));
+};
