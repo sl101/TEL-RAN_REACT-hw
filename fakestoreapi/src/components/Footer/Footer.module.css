@@ -1,5 +1,5 @@
 .footer {
-	background-color: var(--black-900);
+	/* background-color: var(--black-900); */
 }
 
 .footer_wrapper {
@@ -10,4 +10,8 @@
 	align-items: center;
 	gap: 50px;
 
+}
+
+.footer_wrapper p {
+	color: var(--white-color);
 }

@@ -11,14 +11,20 @@ const Header = () => {
 						<span>shop</span>
 					</div>
 					<ul className={s.menu_list}>
-						<li className={s.menu_item}>
-							<NavLink to="/">Home</NavLink>
+						<li>
+							<NavLink className={s.menu_link} to="/">
+								Home
+							</NavLink>
 						</li>
-						<li className={s.menu_item}>
-							<NavLink to="/products">Products</NavLink>
+						<li>
+							<NavLink className={s.menu_link} to="/products">
+								Products
+							</NavLink>
 						</li>
-						<li className={s.menu_item}>
-							<NavLink to="/users">Users</NavLink>
+						<li>
+							<NavLink className={s.menu_link} to="/users">
+								Users
+							</NavLink>
 						</li>
 					</ul>
 				</nav>

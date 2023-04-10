@@ -1,0 +1,11 @@
+.rating_list {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+.star {
+	width: 20px;
+	height: 20px;
+}

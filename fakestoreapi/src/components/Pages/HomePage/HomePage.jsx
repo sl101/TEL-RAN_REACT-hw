@@ -5,7 +5,8 @@ const HomePage = () => {
 		<section className={s.home_page}>
 			<div className="container">
 				<div className={s.home_wrapper}>
-					<h2 className={s.home_title}>Home Page</h2>
+					<h1 className={s.home_title}>FAKE STORE</h1>
+					<span>Home Page</span>
 				</div>
 			</div>
 		</section>

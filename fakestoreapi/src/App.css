@@ -7,8 +7,14 @@
 	box-sizing: border-box;
 
 	--black-color: #000;
-	--black-900: #999999;
+	--black-200: rgba(0, 0, 0, 0.5);
+	--black-900: #999;
 	--white-color: #fff;
+
+	--brand-color: #00ffe4;
+	--brand-light: #bff7f1;
+
+	--gold-color: gold;
 
 	--hover-time: .4s;
 }
@@ -23,7 +29,18 @@ body {
 	font-size: 18px;
 }
 
-
+/* Availability ============ */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
 
 .container {
 	max-width: 1430px;
@@ -36,6 +53,11 @@ body {
 	margin: 0 auto;
 	max-width: 1920px;
 	min-height: 101vh;
+
+	background-image: url('./media/8.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 
 	display: flex;
 	flex-direction: column;
