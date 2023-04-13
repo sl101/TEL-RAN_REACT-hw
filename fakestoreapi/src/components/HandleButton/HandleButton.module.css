@@ -1,0 +1,35 @@
+.button {
+	position: relative;
+	padding: 6px 15px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-weight: 700;
+	font-size: 20px;
+
+	border: 3px solid var(--black-900);
+	border-radius: 10px;
+
+	box-shadow: 0 0 5px var(--black-color), inset 0 0 5px var(--black-color), inset 0 0 15px var(--black-900);
+
+	outline: none;
+	cursor: pointer;
+
+	transition: color var(--hover-time) ease, background-color var(--hover-time) ease;
+
+}
+
+.button:focus {
+	border-color: var(--brand-light)
+}
+
+.button:hover {
+	background-color: var(--black-900);
+}
+
+.button:active {
+	box-shadow: 0 0 0 var(--black-color), inset 0 0 5px var(--black-color), inset 0 0 15px var(--black-900);
+	top: 1px;
+}

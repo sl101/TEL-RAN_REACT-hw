@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useState, useEffect, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { CartContext } from '../../../context/CartContext';
 import { getProduct } from '../../../requests/products_requests';
+import HandleButton from '../../HandleButton/HandleButton';
 import RatingList from '../../RatingList/RatingList';
 import s from './ProductInfoPage.module.css';
 
@@ -9,6 +11,7 @@ const ProductInfoPage = () => {
 	const { title, image, price, description, rating } = product;
 
 	const { id } = useParams();
+
 	useEffect(() => {
 		getProduct(id, (data) => setProduct(data));
 	}, []);
@@ -17,6 +20,9 @@ const ProductInfoPage = () => {
 		gap: '50px',
 		size: '50px',
 	};
+
+	const cartState = useContext(CartContext);
+	// console.log(cartState);
 
 	return (
 		<section className={s.product_info_page}>
@@ -37,6 +43,17 @@ const ProductInfoPage = () => {
 						</p>
 					</div>
 					<RatingList {...rating} ratingStyles={ratingStyles} />
+					<div className={s.handles_wrapper}>
+						<HandleButton
+							text="Add to cart"
+							id={id}
+							addToCart={cartState.addToCart}
+						/>
+
+						<Link to={`/products`}>
+							<HandleButton text="Back to the store" />
+						</Link>
+					</div>
 				</div>
 			</div>
 		</section>

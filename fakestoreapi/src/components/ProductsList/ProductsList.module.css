@@ -1,7 +1,19 @@
+.products_list_wrapper {
+	flex-grow: 1;
+}
+
 .products_list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
-	grid-auto-rows: minmax(180px, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(250px, 330px));
+	grid-auto-rows: minmax(200px, 1fr);
 	justify-content: center;
-	gap: 25px;
+	gap: 40px;
+}
+
+@media screen and (max-width: 750px) {
+
+	.products_list {
+		grid-template-columns: repeat(auto-fill, minmax(290px, 400px));
+		gap: 30px;
+	}
 }

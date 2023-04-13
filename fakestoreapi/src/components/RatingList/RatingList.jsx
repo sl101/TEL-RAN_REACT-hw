@@ -2,15 +2,12 @@ import s from './RatingList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as star } from '@fortawesome/free-solid-svg-icons';
 
-const RatingList = ({ rate, ratingStyles }) => {
-	const { gap, size } = ratingStyles;
-
+const RatingList = ({ rate, ratingStyles: { gap, size } }) => {
 	const ratingValue = Math.round(rate);
-	const ratingStars = [];
-	for (let index = 0; index < 5; index++) {
-		let starColor =
+	const ratingStars = Array.from({ length: 5 }, (_, index) => {
+		const starColor =
 			index < ratingValue ? 'var(--gold-color)' : 'var(--black-color)';
-		ratingStars.push(
+		return (
 			<FontAwesomeIcon
 				className={s.star}
 				icon={star}
@@ -21,9 +18,10 @@ const RatingList = ({ rate, ratingStyles }) => {
 				}}
 			/>
 		);
-	}
+	});
+
 	return (
-		<ul className={s.rating_list} style={{ gap: gap && gap }}>
+		<ul className={s.rating_list} style={gap && { gap }}>
 			{ratingStars.map((elem, index) => (
 				<li className={s.rating_item} key={index}>
 					{elem}

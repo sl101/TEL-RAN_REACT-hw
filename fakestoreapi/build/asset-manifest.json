@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TEL-RAN_REACT-hw/static/css/main.930465a2.css",
-    "main.js": "/TEL-RAN_REACT-hw/static/js/main.f4ad688a.js",
-    "static/media/8.jpg": "/TEL-RAN_REACT-hw/static/media/8.7d23c5faeb4922ecd8db.jpg",
+    "main.css": "/TEL-RAN_REACT-hw/static/css/main.e3d3a3eb.css",
+    "main.js": "/TEL-RAN_REACT-hw/static/js/main.1468ae43.js",
+    "static/media/12.jpg": "/TEL-RAN_REACT-hw/static/media/12.0345c57dd25955562406.jpg",
     "index.html": "/TEL-RAN_REACT-hw/index.html",
-    "main.930465a2.css.map": "/TEL-RAN_REACT-hw/static/css/main.930465a2.css.map",
-    "main.f4ad688a.js.map": "/TEL-RAN_REACT-hw/static/js/main.f4ad688a.js.map"
+    "main.e3d3a3eb.css.map": "/TEL-RAN_REACT-hw/static/css/main.e3d3a3eb.css.map",
+    "main.1468ae43.js.map": "/TEL-RAN_REACT-hw/static/js/main.1468ae43.js.map"
   },
   "entrypoints": [
-    "static/css/main.930465a2.css",
-    "static/js/main.f4ad688a.js"
+    "static/css/main.e3d3a3eb.css",
+    "static/js/main.1468ae43.js"
   ]
 }

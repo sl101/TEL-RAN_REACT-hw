@@ -13,3 +13,15 @@ export const getProduct = (id, callback) => {
 		.then((data) => callback(data))
 		.catch((error) => console.log(error));
 };
+
+export const getForCart = (id) => {
+	return fetch(`${url}/${id}`)
+		.then((resp) => resp.json())
+		.then((data) => {
+			return {
+				...data,
+				amount: 1,
+			};
+		})
+		.catch((error) => console.log(error));
+};

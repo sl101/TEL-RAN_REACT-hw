@@ -1,0 +1,51 @@
+.select_wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 40px;
+
+	/* border: 1px solid var(--black-color); */
+	/* border: 1px solid red; */
+
+	border: 3px solid var(--black-900);
+	border-radius: 10px;
+	box-shadow: 0 0 15px var(--black-color), inset 0 0 15px var(--black-color), inset 0 0 25px var(--black-900);
+
+	background-color: var(--white-color);
+
+	overflow: hidden;
+}
+
+.select_wrapper::after {
+	position: absolute;
+	z-index: 10;
+	content: url('./media/arrow.png');
+	top: 10px;
+	right: 10px;
+}
+
+.form_select {
+	position: relative;
+	z-index: 20;
+	padding-left: 15px;
+
+	width: 100%;
+	height: 40px;
+
+	font-weight: 700;
+	font-style: italic;
+	font-size: 18px;
+
+	border: none;
+	border-radius: 10px;
+	background-color: transparent;
+
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.form_select option {
+	font-weight: 700;
+}

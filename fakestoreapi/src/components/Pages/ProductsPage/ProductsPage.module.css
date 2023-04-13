@@ -1,7 +1,22 @@
 .products_page {
-	padding: 30px 0;
+	padding: 100px 0;
+	margin-top: 100px;
+
 	flex-grow: 1;
 	height: 100%;
+}
+
+.products_wrapper {
+	display: flex;
+	justify-content: flex-start;
+	gap: 25px;
+}
+
+@media screen and (max-width: 1360px) {
+	.products_wrapper {
+		flex-direction: column;
+		gap: 50px;
+	}
 }
 
 .products_title {

@@ -57,9 +57,9 @@ body {
 	max-width: 1920px;
 	min-height: 101vh;
 
-	background-image: url('./media/8.jpg');
+	background-image: url('./media/12.jpg');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top;
 	background-size: cover;
 
 	display: flex;

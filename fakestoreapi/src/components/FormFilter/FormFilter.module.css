@@ -1,0 +1,28 @@
+.form_filter {
+	width: 210px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+}
+
+@media screen and (max-width: 1360px) {
+	.form_filter {
+		width: 320px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.form_filter {
+		width: 80%;
+	}
+}
+
+
+
+.sorter_by {
+	display: block;
+	margin-bottom: 15px;
+	color: var(--white-color);
+
+}

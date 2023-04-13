@@ -1,5 +1,7 @@
 .product_info_page {
 	padding: 50px 0;
+	margin-top: 100px;
+
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
@@ -46,4 +48,11 @@
 p span {
 	font-size: 20px;
 	font-weight: 700;
+}
+
+.handles_wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }

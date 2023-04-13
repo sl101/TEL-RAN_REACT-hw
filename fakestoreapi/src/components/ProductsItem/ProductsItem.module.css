@@ -1,10 +1,8 @@
 .products_item {
-	padding: 15px 15px 30px;
-	position: relative;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 25px;
 
 	border: 3px solid var(--black-900);
 	border-radius: 15px;
@@ -13,66 +11,68 @@
 	background-color: var(--brand-light);
 
 	overflow: hidden;
-	transition: all var(--hover-time) ease;
-
 }
 
-.product_title {
-	font-family: cursive;
-
-	text-align: center;
-	font-size: 18px;
-	cursor: pointer;
-	text-shadow: 0 0 15px var(--black-900);
-
+.image_wrapper {
+	position: relative;
+	padding: 25px 15px;
+	width: 100%;
+	height: 250px;
+	background-color: var(--white-color);
+	box-shadow: inset 0 0px 15px var(--black-color);
+	overflow: hidden;
 }
 
-.hover_wrapper {
+.image_wrapper:before {
 	position: absolute;
+	content: '';
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	background: -webkit-linear-gradient(top, rgba(44, 44, 44, 0.5) 0%, rgba(19, 19, 19, 1) 100%, rgba(19, 19, 19, 1) 101%);
+	transition: background-color var(--hover-time) ease;
+}
 
+.product_image {
+	width: 100%;
+	height: 100%;
 	border-radius: 15px;
-	transform: translateY(100%);
+	object-fit: contain;
+	transform: scale(0.9);
 	transition: transform var(--hover-time) ease;
 }
 
-.products_item:hover .hover_wrapper {
-	transform: translateY(0)
+.products_item_content {
+	padding: 0 20px 40px;
+
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 25px;
 }
 
 .open_card {
-	padding: 4px 15px;
-	margin-bottom: 30px;
-
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 16px;
-
-	border: 2px solid var(--white-color);
-	border-radius: 6px;
-
-	background-color: transparent;
-	color: var(--white-color);
-
-	cursor: pointer;
+	flex-grow: 1;
 	outline: none;
-	transition: border-color var(--hover-time) ease, color var(--hover-time) ease;
 
 }
 
-
-.open_card:hover {
-	border-color: var(--brand-color);
-	color: var(--brand-color);
+.open_card:focus .image_wrapper::before {
+	background-color: var(--black-200);
 }
 
-.open_card:active {
-	top: 1
+.open_card:hover img {
+	transform: scale(1);
+}
+
+
+.product_title {
+	padding: 20px 20px 0;
+	font-family: cursive;
+	font-size: 22px;
+
+	color: var(--black-color);
+	text-shadow: 0 0 15px var(--black-900);
+	cursor: pointer;
 }
