@@ -1,10 +1,10 @@
 import s from './HandleButton.module.css';
 
-const HandleButton = ({ id, text, addToCart }) => {
+const HandleButton = ({ id, text, callback }) => {
 	return (
 		<>
-			{addToCart ? (
-				<button onClick={() => addToCart(id)} className={s.button}>
+			{callback ? (
+				<button onClick={() => callback(id)} className={s.button}>
 					{text}
 				</button>
 			) : (

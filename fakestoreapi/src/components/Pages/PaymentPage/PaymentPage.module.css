@@ -1,0 +1,10 @@
+.payment_page {
+	margin-top: 100px;
+	padding: 100px 0;
+}
+
+.payment_title {
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--white-color);
+}

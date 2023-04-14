@@ -1,7 +1,6 @@
 import s from './FormSelect.module.css';
 
 const FormSelect = ({ defaultValue, array, handleSelect }) => {
-	// console.log(defaultValue);
 	return (
 		<div className={s.select_wrapper}>
 			<select

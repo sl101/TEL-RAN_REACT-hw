@@ -54,7 +54,6 @@ body {
 
 .app {
 	margin: 0 auto;
-	max-width: 1920px;
 	min-height: 101vh;
 
 	background-image: url('./media/12.jpg');

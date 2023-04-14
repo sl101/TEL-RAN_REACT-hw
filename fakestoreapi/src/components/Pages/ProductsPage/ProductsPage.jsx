@@ -9,13 +9,8 @@ const ProductsPage = () => {
 	let [currentProducts, setCurrentProducts] = useState([]);
 	let [sorting, setSorting] = useState('new hits');
 	let [category, setCategory] = useState('all');
-	// let [cart, setCart] = useState([]);
 
 	useEffect(() => {
-		// console.log('ProductsPage');
-		// const localCart = JSON.parse(localStorage.getItem('cart'));
-		// if (localCart) setCart(localCart);
-
 		const localSorting = JSON.parse(localStorage.getItem('sorting'));
 		if (localSorting) setSorting(localSorting);
 
@@ -33,10 +28,6 @@ const ProductsPage = () => {
 			setCurrentProducts(products);
 		}
 	}, [products]);
-
-	// useEffect(() => {
-	// 	localStorage.setItem('cart', JSON.stringify(cart));
-	// }, [cart]);
 
 	useEffect(() => {
 		localStorage.setItem('sorting', JSON.stringify(sorting));
@@ -84,8 +75,6 @@ const ProductsPage = () => {
 		setCurrentProducts(tempProducts);
 	};
 
-	// console.log('products: ', products);
-	// console.log('currentProducts: ', currentProducts);
 	return (
 		<section className={s.products_page}>
 			<div className="container">
@@ -96,7 +85,6 @@ const ProductsPage = () => {
 						sortBy={sortBy}
 						sorting={sorting}
 						category={category}
-						// categories={categories}
 					/>
 					<ProductsList products={currentProducts} />
 				</div>

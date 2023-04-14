@@ -6,14 +6,11 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
 const Header = () => {
-	console.log('header');
 	const cartState = useContext(CartContext);
-	console.log(cartState.cart);
+
 	const goodsAmount = cartState.cart.reduce((accum, item) => {
 		return accum + item.amount;
 	}, 0);
-
-	console.log(goodsAmount);
 
 	return (
 		<header className={s.header}>

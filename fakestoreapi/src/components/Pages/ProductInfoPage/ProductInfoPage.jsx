@@ -22,7 +22,6 @@ const ProductInfoPage = () => {
 	};
 
 	const cartState = useContext(CartContext);
-	// console.log(cartState);
 
 	return (
 		<section className={s.product_info_page}>
@@ -47,7 +46,7 @@ const ProductInfoPage = () => {
 						<HandleButton
 							text="Add to cart"
 							id={id}
-							addToCart={cartState.addToCart}
+							callback={cartState.addToCart}
 						/>
 
 						<Link to={`/products`}>

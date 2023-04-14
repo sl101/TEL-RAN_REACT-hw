@@ -11,6 +11,8 @@ const CartPage = () => {
 	const total = cartState.cart.reduce((acum, item) => {
 		return acum + item.price * item.amount;
 	}, 0);
+	const totalPrice = Number(total.toFixed(2));
+
 	return (
 		<section className={s.cart_page}>
 			<div className="container">
@@ -18,7 +20,12 @@ const CartPage = () => {
 					<Link to={`/products`}>
 						<HandleButton text="Back to the store" />
 					</Link>
-					<p className={s.total_price}>Total price: {total}</p>
+					<p className={s.total_price}>
+						Total price: <span>{totalPrice} &#x20AC;</span>
+					</p>
+					<Link to={`/payment`}>
+						<HandleButton text="Proceed to checkout" />
+					</Link>
 				</div>
 				<ul className={s.cart_list}>
 					{cartState.cart.map((elem, index) => (

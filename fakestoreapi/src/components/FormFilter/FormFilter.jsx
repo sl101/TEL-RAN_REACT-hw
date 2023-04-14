@@ -3,14 +3,7 @@ import s from './FormFilter.module.css';
 import { getCategories } from './../../requests/categories_requests';
 import FormSelect from '../FormSelect/FormSelect';
 
-const FormFilter = ({
-	// categories,
-	sorting,
-	category,
-	filterByCategories,
-	sortBy,
-}) => {
-	// console.log(FormFilter);
+const FormFilter = ({ sorting, category, filterByCategories, sortBy }) => {
 	const [categories, setCategories] = useState([]);
 
 	const sorter = [

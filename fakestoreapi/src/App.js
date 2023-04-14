@@ -8,7 +8,8 @@ import ProductInfoPage from './components/Pages/ProductInfoPage/ProductInfoPage'
 import CartPage from './components/Pages/CartPage/CartPage';
 import { CartContext } from './context/CartContext';
 import { useEffect, useState } from 'react';
-import { getForCart, getProduct } from './requests/products_requests';
+import { getProduct } from './requests/products_requests';
+import PaymentPage from './components/Pages/PaymentPage/PaymentPage';
 
 function App() {
 	let [cart, setCart] = useState([]);
@@ -23,18 +24,36 @@ function App() {
 	}, [cart]);
 
 	const addToCart = (id) => {
-		if (cart && cart.length > 0) {
-			if (!cart.map((elem) => elem.id).includes(id)) {
-				getForCart(id).then((data) => setCart([data, ...cart]));
-			} else {
-				const tempArray = cart.map((elem) => elem.id);
-				let targetIndex = tempArray.findIndex((el) => el === id);
-				++cart[targetIndex].amount;
-			}
+		const item = cart.find((elem) => elem.id === id);
+		if (item) {
+			const updatedCart = cart.map((elem) =>
+				elem.id === id ? { ...elem, amount: elem.amount + 1 } : elem
+			);
+			setCart(updatedCart);
 		} else {
-			getForCart(id).then((data) => setCart([data, ...cart]));
+			getProduct(id, (data) => {
+				setCart([{ ...data, amount: 1 }, ...cart]);
+			});
 		}
-		console.log('addToCart cart:', cart);
+	};
+
+	const removeFromCart = (id) => {
+		setCart(cart.filter((elem) => elem.id !== id));
+	};
+
+	const increase = (id) => {
+		const tempCart = [...cart];
+		const item = tempCart.find((elem) => elem.id === id);
+		++item.amount;
+		setCart(tempCart);
+	};
+	const decrease = (id) => {
+		const tempCart = [...cart];
+		const item = tempCart.find((elem) => elem.id === id);
+		if (item.amount > 0) {
+			--item.amount;
+			setCart(tempCart);
+		}
 	};
 
 	return (
@@ -44,6 +63,9 @@ function App() {
 					value={{
 						cart,
 						addToCart: addToCart,
+						removeFromCart: removeFromCart,
+						increase: increase,
+						decrease: decrease,
 					}}
 				>
 					<Header />
@@ -52,6 +74,7 @@ function App() {
 						<Route path="/products" element={<ProductsPage />} />
 						<Route path="/products/:id" element={<ProductInfoPage />} />
 						<Route path="/cart" element={<CartPage />} />
+						<Route path="/payment" element={<PaymentPage />} />
 					</Routes>
 				</CartContext.Provider>
 			</Router>

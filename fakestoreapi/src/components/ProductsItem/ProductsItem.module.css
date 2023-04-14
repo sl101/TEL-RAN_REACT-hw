@@ -55,7 +55,6 @@
 .open_card {
 	flex-grow: 1;
 	outline: none;
-
 }
 
 .open_card:focus .image_wrapper::before {

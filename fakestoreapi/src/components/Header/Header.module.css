@@ -70,9 +70,7 @@
 
 .cart_wrapper {
 	position: relative;
-	display: flex;
-	align-items: center;
-	gap: 25px;
+	width: 100px;
 	cursor: pointer;
 	outline: none;
 }
@@ -88,7 +86,11 @@
 }
 
 .cart_value {
-	font-size: 28px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+
+	font-size: 30px;
 
 	color: var(--white-color);
 	transition: color var(--hover-time) ease;

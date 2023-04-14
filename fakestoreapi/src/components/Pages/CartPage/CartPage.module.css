@@ -7,15 +7,26 @@
 	display: flex;
 	justify-content: start;
 	align-items: center;
-	gap: 200px;
+	gap: 250px;
 
 }
 
 .total_price {
+	margin-right: 100px;
+	position: relative;
 	font-weight: 700;
 	font-size: 22px;
 
 	color: var(--white-color);
+}
+
+.total_price span {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: -120px;
+
+	font-size: 22px;
 }
 
 .cart_list {
@@ -23,5 +34,5 @@
 
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 20px;
 }

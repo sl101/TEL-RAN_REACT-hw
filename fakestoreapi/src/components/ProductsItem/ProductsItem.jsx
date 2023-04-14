@@ -23,13 +23,13 @@ const ProductsItem = ({ id, image, title, rating, price }) => {
 			<div className={s.products_item_content}>
 				<p>
 					<span>Price:</span>
-					<span> {price} &#x24;</span>
+					<span> {price} &#x20AC;</span>
 				</p>
 				<RatingList {...rating} ratingStyles={ratingStyles} />
 				<HandleButton
 					text="Add to cart"
 					id={id}
-					addToCart={cartState.addToCart}
+					callback={cartState.addToCart}
 				/>
 			</div>
 		</li>
