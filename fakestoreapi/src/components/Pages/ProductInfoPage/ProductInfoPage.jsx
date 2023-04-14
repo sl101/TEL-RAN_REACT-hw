@@ -16,11 +16,6 @@ const ProductInfoPage = () => {
 		getProduct(id, (data) => setProduct(data));
 	}, []);
 
-	const ratingStyles = {
-		gap: '50px',
-		size: '50px',
-	};
-
 	const cartState = useContext(CartContext);
 
 	return (
@@ -41,7 +36,7 @@ const ProductInfoPage = () => {
 							{description}
 						</p>
 					</div>
-					<RatingList {...rating} ratingStyles={ratingStyles} />
+					<RatingList {...rating} ratingClass="info_page" />
 					<div className={s.handles_wrapper}>
 						<HandleButton
 							text="Add to cart"

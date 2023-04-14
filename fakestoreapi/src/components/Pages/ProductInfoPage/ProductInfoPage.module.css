@@ -52,7 +52,16 @@ p span {
 
 .handles_wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	gap: 50px;
+}
+
+@media screen and (max-width: 460px) {
+
+	.handles_wrapper button,
+	.handles_wrapper a {
+		width: 100%;
+	}
 }

@@ -12,9 +12,10 @@
 	}
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 460px) {
 	.form_filter {
-		width: 80%;
+		width: 100%;
+		gap: 50px;
 	}
 }
 

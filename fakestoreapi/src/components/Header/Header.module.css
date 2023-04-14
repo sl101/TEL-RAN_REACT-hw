@@ -15,6 +15,51 @@
 	gap: 30px;
 }
 
+@media screen and (max-width: 460px) {
+	.header {
+		padding: 15px 0;
+	}
+
+	.header_nav {
+		display: grid;
+		grid-template-areas:
+			"logo cart"
+			"links links"
+		;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.logo {
+		grid-area: logo;
+	}
+
+	.menu_list {
+		grid-area: links;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.cart_wrapper {
+		top: 10px;
+		grid-area: cart;
+		justify-self: end;
+	}
+}
+
+@media screen and (min-width: 460px) {
+	.menu_list {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+	}
+}
+
 .logo {
 	width: 60px;
 	height: 60px;
@@ -41,11 +86,11 @@
 }
 
 .menu_list {
-	flex-grow: 1;
+	/* flex-grow: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
+	gap: 50px; */
 }
 
 .menu_link {
@@ -70,41 +115,60 @@
 
 .cart_wrapper {
 	position: relative;
-	width: 100px;
+	width: 60px;
 	cursor: pointer;
 	outline: none;
 }
 
-.cart {
 
+.cart {
 	width: 40px;
 	height: 40px;
+
 	color: var(--white-color);
 
 	transition: color var(--hover-time) ease;
-
 }
 
 .cart_value {
+	padding: 4px;
+
 	position: absolute;
-	top: 2px;
+	top: 0;
 	right: 0;
+	transform: translate(0, -50%);
+	width: 32px;
+	height: 32px;
 
-	font-size: 30px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
 
-	color: var(--white-color);
-	transition: color var(--hover-time) ease;
-}
+	border-radius: 50%;
 
-.cart_wrapper:focus .cart,
-.cart_wrapper:focus .cart_value {
+	box-shadow: inset 0 0 5px var(--black-color);
+	/* background-color: var(--brand-light); */
+	background-color: var(--white-color);
 	color: var(--black-900);
+	transition: color var(--hover-time) ease, background-color var(--hover-time) ease;
 }
 
-.cart_wrapper:hover .cart,
-.cart_wrapper:hover .cart_value {
+.cart_wrapper:focus .cart {
+	color: var(--brand-light);
+}
 
+.cart_wrapper:focus .cart_value {
+	background-color: var(--brand-light);
+	color: var(--white-color);
+}
+
+.cart_wrapper:hover .cart {
 	color: var(--brand-color);
+}
+
+.cart_wrapper:hover .cart_value {
+	background-color: var(--brand-color);
 }
 
 .cart_wrapper:active {

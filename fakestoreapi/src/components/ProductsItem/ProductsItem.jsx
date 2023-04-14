@@ -6,11 +6,6 @@ import RatingList from '../RatingList/RatingList';
 import s from './ProductsItem.module.css';
 
 const ProductsItem = ({ id, image, title, rating, price }) => {
-	const ratingStyles = {
-		gap: '15px',
-		size: '20px',
-	};
-
 	const cartState = useContext(CartContext);
 	return (
 		<li className={s.products_item}>
@@ -25,7 +20,7 @@ const ProductsItem = ({ id, image, title, rating, price }) => {
 					<span>Price:</span>
 					<span> {price} &#x20AC;</span>
 				</p>
-				<RatingList {...rating} ratingStyles={ratingStyles} />
+				<RatingList {...rating} ratingClass="products_item" />
 				<HandleButton
 					text="Add to cart"
 					id={id}

@@ -1,5 +1,35 @@
-.rating_list {
+.products_item,
+.info_page {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+.products_item svg,
+.info_page svg {
+	height: 100%;
+}
+
+.products_item {
+	gap: 15px;
+}
+
+.info_page {
+	gap: 40px;
+}
+
+.info_page li {
+	width: 50px;
+	height: 50px;
+}
+
+@media screen and (max-width: 460px) {
+	.info_page {
+		gap: 30px;
+	}
+
+	.info_page li {
+		width: 30px;
+		height: 30px;
+	}
 }
