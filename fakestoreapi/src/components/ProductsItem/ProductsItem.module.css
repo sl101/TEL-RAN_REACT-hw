@@ -25,6 +25,7 @@
 
 .image_wrapper:before {
 	position: absolute;
+	z-index: 20;
 	content: '';
 	top: 0;
 	left: 0;

@@ -11,6 +11,8 @@ const ProductsPage = () => {
 	let [category, setCategory] = useState('all');
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+
 		const localSorting = JSON.parse(localStorage.getItem('sorting'));
 		if (localSorting) setSorting(localSorting);
 

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../../context/CartContext';
 import CartItem from '../../CartItem/CartItem';
@@ -7,6 +7,10 @@ import s from './CartPage.module.css';
 
 const CartPage = () => {
 	const cartState = useContext(CartContext);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const total = cartState.cart.reduce((acum, item) => {
 		return acum + item.price * item.amount;
@@ -17,15 +21,15 @@ const CartPage = () => {
 		<section className={s.cart_page}>
 			<div className="container">
 				<div className={s.cart_header}>
-					<Link to={`/products`}>
+					<Link to={`/products`} tabIndex="-1">
 						<HandleButton text="Back to the store" />
+					</Link>
+					<Link to={`/payment`} tabIndex="-1">
+						<HandleButton text="Proceed to checkout" />
 					</Link>
 					<p className={s.total_price}>
 						Total price: <span>{totalPrice} &#x20AC;</span>
 					</p>
-					<Link to={`/payment`}>
-						<HandleButton text="Proceed to checkout" />
-					</Link>
 				</div>
 				<ul className={s.cart_list}>
 					{cartState.cart.map((elem, index) => (

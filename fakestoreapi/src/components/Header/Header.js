@@ -19,10 +19,12 @@ const Header = () => {
 		<header className={s.header}>
 			<div className="container">
 				<nav className={s.header_nav}>
-					<div className={s.logo}>
-						<span>fake</span>
-						<span>store</span>
-					</div>
+					<NavLink to="/" className={s.logo_wrapper}>
+						<div className={s.logo}>
+							<span>fake</span>
+							<span>store</span>
+						</div>
+					</NavLink>
 					<ul className={s.menu_list}>
 						<li>
 							<NavLink className={s.menu_link} to="/">

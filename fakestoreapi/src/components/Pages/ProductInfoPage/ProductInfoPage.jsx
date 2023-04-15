@@ -13,6 +13,7 @@ const ProductInfoPage = () => {
 	const { id } = useParams();
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		getProduct(id, (data) => setProduct(data));
 	}, []);
 
@@ -44,7 +45,7 @@ const ProductInfoPage = () => {
 							callback={cartState.addToCart}
 						/>
 
-						<Link to={`/products`}>
+						<Link to={`/products`} tabIndex="-1">
 							<HandleButton text="Back to the store" />
 						</Link>
 					</div>

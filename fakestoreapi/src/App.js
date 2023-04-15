@@ -24,15 +24,15 @@ function App() {
 	}, [cart]);
 
 	const addToCart = (id) => {
-		const item = cart.find((elem) => elem.id === id);
+		const tempCart = [...cart];
+		const item = tempCart.find((elem) => elem.id === +id);
+
 		if (item) {
-			const updatedCart = cart.map((elem) =>
-				elem.id === id ? { ...elem, amount: elem.amount + 1 } : elem
-			);
-			setCart(updatedCart);
+			++item.amount;
+			setCart(tempCart);
 		} else {
 			getProduct(id, (data) => {
-				setCart([{ ...data, amount: 1 }, ...cart]);
+				setCart([{ ...data, amount: 1 }, ...tempCart]);
 			});
 		}
 	};
@@ -47,6 +47,7 @@ function App() {
 		++item.amount;
 		setCart(tempCart);
 	};
+
 	const decrease = (id) => {
 		const tempCart = [...cart];
 		const item = tempCart.find((elem) => elem.id === id);
