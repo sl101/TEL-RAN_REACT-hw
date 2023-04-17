@@ -22,7 +22,7 @@ const CartPage = () => {
 			<div className="container">
 				<div className={s.cart_header}>
 					<Link to={`/products`} tabIndex="-1">
-						<HandleButton text="Back to the store" />
+						<HandleButton text="<<< Back to the store" />
 					</Link>
 					<Link to={`/payment`} tabIndex="-1">
 						<HandleButton text="Proceed to checkout" />

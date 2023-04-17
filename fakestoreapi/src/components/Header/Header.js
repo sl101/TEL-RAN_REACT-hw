@@ -1,12 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { Link, NavLink } from 'react-router-dom';
-import { useContext } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
 import { CartContext } from '../../context/CartContext';
 import s from './Header.module.css';
 
 const Header = () => {
 	const cartState = useContext(CartContext);
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		navigate('/');
+	}, []);
 
 	const goodsAmount = cartState.cart.reduce((accum, item) => {
 		return accum + item.amount;

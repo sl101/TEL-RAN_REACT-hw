@@ -10,6 +10,7 @@ import { CartContext } from './context/CartContext';
 import { useEffect, useState } from 'react';
 import { getProduct } from './requests/products_requests';
 import PaymentPage from './components/Pages/PaymentPage/PaymentPage';
+import { NoFoundPage } from './components/Pages/NoFoundPage/NoFoundPage';
 
 function App() {
 	let [cart, setCart] = useState([]);
@@ -71,11 +72,12 @@ function App() {
 				>
 					<Header />
 					<Routes>
-						<Route path="*" element={<HomePage />} />
+						<Route path="/" element={<HomePage />} />
 						<Route path="/products" element={<ProductsPage />} />
 						<Route path="/products/:id" element={<ProductInfoPage />} />
 						<Route path="/cart" element={<CartPage />} />
 						<Route path="/payment" element={<PaymentPage />} />
+						<Route path="/*" element={<NoFoundPage />} />
 					</Routes>
 				</CartContext.Provider>
 			</Router>

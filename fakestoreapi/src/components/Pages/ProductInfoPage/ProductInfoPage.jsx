@@ -46,7 +46,7 @@ const ProductInfoPage = () => {
 						/>
 
 						<Link to={`/products`} tabIndex="-1">
-							<HandleButton text="Back to the store" />
+							<HandleButton text="<<< Back to the store" />
 						</Link>
 					</div>
 				</div>
