@@ -1,6 +1,6 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './components/Pages/HomePage/HomePage';
 import ProductsPage from './components/Pages/ProductsPage/ProductsPage';
