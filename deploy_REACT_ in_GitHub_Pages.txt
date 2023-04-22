@@ -16,7 +16,7 @@
         "eject": "react-scripts eject"
         		},
 
-5.  in .gitignore comment # /build
+  				\\ 5.  in .gitignore comment # /build -не нужно
 6.  terminal => cd ..
 7.  terminal => git add . / git commit -m "..." / git push
 8.  terminal => cd project

@@ -2,4 +2,10 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+
+	--lyaout-color: #e5e5e5;
+	--primary-color: #ff6464;
+	--secondary-color: #00a8cc;
+	--dark-color: #21243d;
+	--light-color: #8695a4;
 }
