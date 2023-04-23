@@ -1,0 +1,34 @@
+.header {
+	padding: 27px 60px;
+}
+
+.menu_list {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 35px;
+}
+
+.link {
+	position: relative;
+
+	font-weight: 500;
+	font-size: 20px;
+
+	color: var(--black-color);
+
+	outline: none;
+	transition: color var(--hover-time) ease;
+}
+
+.link:focus {
+	color: var(--primary-color)
+}
+
+.link:hover {
+	color: var(--secondary-color)
+}
+
+.link:active {
+	top: 1px;
+}

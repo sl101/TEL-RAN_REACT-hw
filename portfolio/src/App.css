@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -6,6 +8,34 @@
 	--lyaout-color: #e5e5e5;
 	--primary-color: #ff6464;
 	--secondary-color: #00a8cc;
-	--dark-color: #21243d;
 	--light-color: #8695a4;
+	--dark-color: #21243d;
+	--black-color: #000;
+
+	--hover-time: .4s;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.app {
+	font-family: "Heebo", serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--dark-color);
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+
+	max-width: 710px;
+	width: 100%;
 }

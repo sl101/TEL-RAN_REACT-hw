@@ -1,7 +1,21 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Footer, Header } from './components';
+import { HomePage, WorksPage, WorkInfoPage, BlogPage } from './page';
 
 function App() {
-	return <div className="app">test portfolio</div>;
+	return (
+		<div className="app">
+			<Header />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/works" element={<WorksPage />} />
+				<Route path="/blog" element={<BlogPage />} />
+				<Route path="/works/:id" element={<WorkInfoPage />} />
+			</Routes>
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
