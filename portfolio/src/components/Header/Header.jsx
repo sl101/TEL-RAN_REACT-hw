@@ -1,7 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import s from './Header.module.css';
 
 export const Header = () => {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		navigate('/');
+	}, []);
 	return (
 		<header className={s.header}>
 			<nav>
