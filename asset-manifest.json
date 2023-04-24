@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TEL-RAN_REACT-hw/static/css/main.5e29cf90.css",
-    "main.js": "/TEL-RAN_REACT-hw/static/js/main.b5214aed.js",
+    "main.css": "/TEL-RAN_REACT-hw/static/css/main.6777da91.css",
+    "main.js": "/TEL-RAN_REACT-hw/static/js/main.d2d524c6.js",
     "static/media/landing.jpg": "/TEL-RAN_REACT-hw/static/media/landing.015461518bcce58a6f90.jpg",
     "static/media/illustration.jpg": "/TEL-RAN_REACT-hw/static/media/illustration.f5b0e15a54dc4eb31608.jpg",
     "static/media/john_avatar.jpg": "/TEL-RAN_REACT-hw/static/media/john_avatar.95a0e0ee5480ade96e4c.jpg",
@@ -9,11 +9,11 @@
     "static/media/typography.jpg": "/TEL-RAN_REACT-hw/static/media/typography.f5de28ecdadfae1acb8f.jpg",
     "static/media/components.jpg": "/TEL-RAN_REACT-hw/static/media/components.c9494e5af0ba912847b4.jpg",
     "index.html": "/TEL-RAN_REACT-hw/index.html",
-    "main.5e29cf90.css.map": "/TEL-RAN_REACT-hw/static/css/main.5e29cf90.css.map",
-    "main.b5214aed.js.map": "/TEL-RAN_REACT-hw/static/js/main.b5214aed.js.map"
+    "main.6777da91.css.map": "/TEL-RAN_REACT-hw/static/css/main.6777da91.css.map",
+    "main.d2d524c6.js.map": "/TEL-RAN_REACT-hw/static/js/main.d2d524c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e29cf90.css",
-    "static/js/main.b5214aed.js"
+    "static/css/main.6777da91.css",
+    "static/js/main.d2d524c6.js"
   ]
 }
