@@ -26,6 +26,12 @@
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 30px;
+	color: var(--dark-color);
+	transition: color var(--hover-time) ease;
+}
+
+.work_title:hover {
+	color: var(--secondary-color)
 }
 
 .meta_wrapper {
