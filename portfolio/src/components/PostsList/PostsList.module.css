@@ -1,1 +1,24 @@
-.posts {}
+.posts_list {
+	margin-top: 55px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.posts_list.home {
+	margin-top: 0;
+	flex-direction: row;
+	gap: 20px;
+}
+
+
+@media (max-width: 800px) {
+	.posts_list {
+		margin-top: 20px;
+	}
+
+
+	.posts_list.home {
+		flex-direction: column;
+	}
+}

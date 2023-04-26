@@ -1,5 +1,4 @@
 import { PostsList } from '../../components';
-import s from './BlogPage.module.css';
 
 export const BlogPage = () => {
 	return (

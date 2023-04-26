@@ -1,0 +1,13 @@
+.works_list {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+@media (max-width: 800px) {
+	.works_list {
+		margin-top: 0;
+	}
+}

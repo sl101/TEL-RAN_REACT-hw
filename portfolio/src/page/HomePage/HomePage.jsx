@@ -14,7 +14,7 @@ export const HomePage = () => {
 							View all
 						</NavLink>
 					</div>
-					<PostsList postsAmount={2} />
+					<PostsList postsAmount={2} type="home" />
 				</div>
 			</section>
 			<section className={s.works}>

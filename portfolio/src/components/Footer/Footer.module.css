@@ -44,3 +44,9 @@
 
 	transition: color var(--hover-time) ease;
 }
+
+@media (max-width: 600px) {
+	.footer {
+		padding: 30px 0 40px;
+	}
+}

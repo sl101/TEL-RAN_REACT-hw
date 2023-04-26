@@ -5,11 +5,15 @@
 	margin: 0;
 	box-sizing: border-box;
 
+	--white-color: #fff;
 	--lyaout-color: #e5e5e5;
+	--border-color: #e0e0e0;
 	--primary-color: #ff6464;
 	--secondary-color: #00a8cc;
+	--secondary-light: #edf7fa;
 	--light-color: #8695a4;
 	--dark-color: #21243d;
+	--date-color: #142850;
 	--black-color: #000;
 
 	--hover-time: .4s;
@@ -36,6 +40,31 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 
-	max-width: 710px;
+	max-width: 890px;
 	width: 100%;
+}
+
+section {
+	padding: 30px 0;
+}
+
+.page_title {
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 60px;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 22px;
+}
+
+@media (max-width: 460px) {
+	.app {
+		padding-top: 60px;
+	}
+
+	.page_title {
+		font-size: 30px;
+	}
 }

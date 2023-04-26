@@ -7,7 +7,7 @@ export const Head = () => {
 			<div className="container">
 				<div className={s.wrapper}>
 					<div className={s.content}>
-						<h1 className={s.title}>
+						<h1 className="page_title">
 							<span>Hi, I am John,</span>
 							Creative Technologist
 						</h1>
@@ -18,7 +18,9 @@ export const Head = () => {
 								Exercitation veniam consequat sunt nostrud amet.
 							</p>
 						</div>
-						<button type="button">Download Resume</button>
+						<div className={s.head_btn}>
+							<button type="button">Download Resume</button>
+						</div>
 					</div>
 					<div className={s.image}>
 						<img src={image} alt="Smiling young man in cap" />
