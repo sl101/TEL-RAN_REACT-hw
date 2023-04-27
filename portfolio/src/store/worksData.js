@@ -9,7 +9,7 @@ export const works_data = [
 		year: '2020',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 		content: [
-			{ h1: 'The Pros and Cons of Auto Insurance' },
+			['h1', 'The Pros and Cons of Auto Insurance'],
 			[
 				'img',
 				'https://images.freeimages.com/images/large-previews/e81/westminster-bridge-and-big-ben-london-uk-1635339.jpg',
@@ -31,7 +31,7 @@ export const works_data = [
 			'https://images.freeimages.com/images/large-previews/25d/euro-1236438.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 		content: [
-			{ h1: 'When Is the Best Time to Start a Website?' },
+			['h1', 'When Is the Best Time to Start a Website?'],
 			[
 				'img',
 				'https://images.freeimages.com/images/large-previews/b65/bald-eagle-1635769.jpg',
@@ -61,7 +61,7 @@ export const works_data = [
 			'https://images.freeimages.com/images/large-previews/433/shoe-maker-1241052.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 		content: [
-			{ h1: 'Top 5 Benefits of Creating Quality Content' },
+			['h1', 'Top 5 Benefits of Creating Quality Content'],
 			['h2', 'The Art of Crafting Engaging Content'],
 			[
 				'img',
@@ -90,13 +90,17 @@ export const works_data = [
 		main_img:
 			'https://images.freeimages.com/images/large-previews/4fe/wiene-museum-1217586.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-		content: {
-			h1: 'Components: A Comprehensive Guide to Unlocking Their Potential',
-			img: 'https://images.freeimages.com/images/large-previews/4b2/walking-on-the-mountain-1-1566594.jpg',
-
-			h2: 'A Beginners Guide to Components',
-
-			text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-		},
+		content: [
+			['h1', 'Components: A Comprehensive Guide to Unlocking Their Potential'],
+			[
+				'img',
+				'https://images.freeimages.com/images/large-previews/4b2/walking-on-the-mountain-1-1566594.jpg',
+			],
+			['h2', 'A Beginners Guide to Components'],
+			[
+				'text',
+				'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+			],
+		],
 	},
 ];
