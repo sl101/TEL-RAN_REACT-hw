@@ -12,6 +12,7 @@
 	--secondary-color: #00a8cc;
 	--secondary-light: #edf7fa;
 	--light-color: #8695a4;
+	--popup-color: rgba(221, 230, 239, .8);
 	--dark-color: #21243d;
 	--date-color: #142850;
 	--black-color: #000;
@@ -35,6 +36,28 @@ a {
 	font-size: 16px;
 	color: var(--dark-color);
 	overflow: hidden;
+}
+
+.popup {
+	align-items: center;
+	background-color: var(--popup-color);
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	z-index: 30;
+	top: 0;
+	transition: opacity var(--hover-time) ease;
+	width: 100%;
+	z-index: 60;
+}
+
+.popup.open {
+	opacity: 1;
+	pointer-events: all;
 }
 
 .container {

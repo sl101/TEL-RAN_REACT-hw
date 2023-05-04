@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { menuList } from '../../store/menuList';
 import s from './Header.module.css';
 
-export const Header = ({ active, setActive }) => {
+export const Header = ({ active, setActive, toggleContacts }) => {
 	const menu_list = menuList;
 	const isActive = active ? s['active'] : '';
 
@@ -27,6 +27,11 @@ export const Header = ({ active, setActive }) => {
 							</NavLink>
 						</li>
 					))}
+					<li>
+						<NavLink className={s.link} onClick={toggleContacts}>
+							Contact
+						</NavLink>
+					</li>
 				</ul>
 				<div
 					className={`${s.burger} ${isActive}`}

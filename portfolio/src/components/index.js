@@ -1,4 +1,5 @@
 export { Header } from './Header/Header';
+export { ContactForm } from './ContactForm/ContactForm';
 export { Head } from './Head/Head';
 
 export { PostsList } from './PostsList/PostsList';

@@ -1,17 +1,18 @@
 import { useRef, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { HomePage, WorksPage, WorkInfoPage, BlogPage } from './page';
-import { Footer, Header } from './components';
+import { ContactForm, Footer, Header } from './components';
 import './App.css';
-// import 'animate.css';
+import 'animate.css';
 
 function App() {
 	const refApp = useRef(null);
 
 	const [active, setActive] = useState(false);
+	const [opened, setOpened] = useState(false);
 
 	const handleScroll = (event) => {
-		if (active) {
+		if (active || opened) {
 			event.preventDefault();
 			event.stopPropagation();
 		}
@@ -23,9 +24,23 @@ function App() {
 		return () => refApp.current.removeEventListener('wheel', handleScroll);
 	});
 
+	const toggleContacts = () => {
+		setOpened(!opened);
+		setTimeout(() => {
+			setActive(false);
+		}, 400);
+	};
+
 	return (
 		<div className="app" ref={refApp}>
-			<Header active={active} setActive={setActive} />
+			<div className={opened ? 'popup open' : 'popup'}>
+				<ContactForm toggleContacts={toggleContacts} />
+			</div>
+			<Header
+				active={active}
+				setActive={setActive}
+				toggleContacts={toggleContacts}
+			/>
 			<main>
 				<Routes>
 					<Route path="/" element={<HomePage />} />
