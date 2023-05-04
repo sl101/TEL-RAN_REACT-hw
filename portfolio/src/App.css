@@ -73,9 +73,10 @@ section {
 }
 
 .page_title {
+	width: 100%;
 	font-weight: 700;
 	font-size: 44px;
-	line-height: 60px;
+	line-height: 44px;
 }
 
 .title {
@@ -84,6 +85,12 @@ section {
 }
 
 @media (max-width: 460px) {
+
+
+	section {
+		padding: 15px 0;
+	}
+
 	.app {
 		padding-top: 60px;
 	}
