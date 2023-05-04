@@ -8,6 +8,7 @@ export const works_data = [
 			'https://images.freeimages.com/images/large-previews/750/a-snail-on-the-wood-1634483.jpg',
 		year: '2020',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+		animation: 'animate__animated animate__fadeInLeft',
 		content: [
 			['h1', 'The Pros and Cons of Auto Insurance'],
 			[
@@ -30,6 +31,7 @@ export const works_data = [
 		main_img:
 			'https://images.freeimages.com/images/large-previews/25d/euro-1236438.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+		animation: 'animate__animated animate__fadeInRight',
 		content: [
 			['h1', 'When Is the Best Time to Start a Website?'],
 			[
@@ -60,6 +62,7 @@ export const works_data = [
 		main_img:
 			'https://images.freeimages.com/images/large-previews/433/shoe-maker-1241052.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+		animation: 'animate__animated animate__fadeInLeft',
 		content: [
 			['h1', 'Top 5 Benefits of Creating Quality Content'],
 			['h2', 'The Art of Crafting Engaging Content'],
@@ -90,6 +93,7 @@ export const works_data = [
 		main_img:
 			'https://images.freeimages.com/images/large-previews/4fe/wiene-museum-1217586.jpg',
 		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+		animation: 'animate__animated animate__fadeInRight',
 		content: [
 			['h1', 'Components: A Comprehensive Guide to Unlocking Their Potential'],
 			[
