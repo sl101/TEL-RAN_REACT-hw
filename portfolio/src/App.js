@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { HomePage, WorksPage, WorkInfoPage, BlogPage } from './page';
 import { Footer, Header } from './components';
 import './App.css';
+// import 'animate.css';
 
 function App() {
 	const refApp = useRef(null);

@@ -7,7 +7,7 @@ export const Head = () => {
 			<div className="container">
 				<div className={s.wrapper}>
 					<div className={s.content}>
-						<h1 className="page_title">
+						<h1 className="animate__animated animate__fadeInDown page_title">
 							<span>Hi, I am John,</span>
 							Creative Technologist
 						</h1>
@@ -18,11 +18,13 @@ export const Head = () => {
 								Exercitation veniam consequat sunt nostrud amet.
 							</p>
 						</div>
-						<div className={s.head_btn}>
+						<div
+							className={`animate__animated animate__fadeInUp ${s.head_btn}`}
+						>
 							<button type="button">Download Resume</button>
 						</div>
 					</div>
-					<div className={s.image}>
+					<div className={`animate__animated animate__fadeInRight ${s.image}`}>
 						<img src={image} alt="Smiling young man in cap" />
 					</div>
 				</div>

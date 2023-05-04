@@ -1,0 +1,35 @@
+.form_container {
+	position: relative;
+	z-index: 30;
+	max-width: 400px;
+	width: 100%;
+	min-height: 500px;
+	padding: 0 15px;
+}
+
+.close_icon {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+
+	font-size: 25px;
+
+	cursor: pointer;
+	transition: color var(--hover-time) ease;
+}
+
+.close_icon:hover {
+	color: var(--primary-color)
+}
+
+.form {
+	width: 100%;
+	height: 100%;
+	padding: 40px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+
+	background-color: var(--white-color);
+}

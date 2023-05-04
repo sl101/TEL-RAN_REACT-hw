@@ -1,8 +1,16 @@
 import s from './WorkItem.module.css';
 
-export const WorkItem = ({ title, date, image, alt, tags, description }) => {
+export const WorkItem = ({
+	title,
+	date,
+	image,
+	alt,
+	tags,
+	description,
+	animation,
+}) => {
 	return (
-		<li className={s.work_item}>
+		<li className={`${animation} ${s.work_item}`}>
 			<div className={s.img_wrapper}>
 				<img src={image} alt={alt} />
 			</div>
