@@ -1,4 +1,4 @@
-- [active project](https://sl101.github.io/TEL-RAN_REACT-hw)
+- [Portfolio project](https://sl101.github.io/TEL-RAN_REACT-hw)
 
 - [Shop basket](https://sl101.github.io/TelRan-shopbasket)
 
