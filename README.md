@@ -1,4 +1,6 @@
-- [Portfolio project](https://sl101.github.io/TEL-RAN_REACT-hw)
+- [Portfolio project](https://sl101.github.io/TelRan-portfolio)
+
+- [Products project](https://sl101.github.io/TelRan-products)
 
 - [Shop basket](https://sl101.github.io/TelRan-shopbasket)
 
