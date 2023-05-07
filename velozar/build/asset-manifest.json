@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TelRan-velozar/static/css/main.45c875ad.css",
+    "main.js": "/TelRan-velozar/static/js/main.e1144903.js",
+    "static/media/rental.jpg": "/TelRan-velozar/static/media/rental.441e153a9369c802a28e.jpg",
+    "static/media/offer.jpg": "/TelRan-velozar/static/media/offer.8578be5c58223958696c.jpg",
+    "static/media/head.png": "/TelRan-velozar/static/media/head.236c9ad62e27d3fbaecc.png",
+    "static/media/logo.png": "/TelRan-velozar/static/media/logo.6eaf100e6851577c30a5.png",
+    "index.html": "/TelRan-velozar/index.html",
+    "main.45c875ad.css.map": "/TelRan-velozar/static/css/main.45c875ad.css.map",
+    "main.e1144903.js.map": "/TelRan-velozar/static/js/main.e1144903.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45c875ad.css",
+    "static/js/main.e1144903.js"
+  ]
+}
