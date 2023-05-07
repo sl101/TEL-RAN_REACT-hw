@@ -1,7 +1,11 @@
-- [Portfolio project](https://sl101.github.io/TelRan-portfolio)
+## [Shop basket](https://sl101.github.io/TelRan-shopbasket)
 
-- [Products project](https://sl101.github.io/TelRan-products)
+## [Portfolio](https://sl101.github.io/TelRan-portfolio)
 
-- [Shop basket](https://sl101.github.io/TelRan-shopbasket)
+## [Fake store](https://sl101.github.io/TelRan-fake-store)
 
-- [Velozar](https://sl101.github.io/TelRan-velozar)
+## [Diary](https://sl101.github.io/TelRan-diary)
+
+## [Products](https://sl101.github.io/TelRan-products)
+
+## [Velozar](https://sl101.github.io/TelRan-velozar)

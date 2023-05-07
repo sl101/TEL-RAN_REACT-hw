@@ -2,7 +2,7 @@
 	"name": "fakestoreapi",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://sl101.github.io/TEL-RAN_REACT-hw",
+	"homepage": "https://sl101.github.io/TelRan-fake-store",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.4.0",
 		"@fortawesome/free-regular-svg-icons": "^6.4.0",

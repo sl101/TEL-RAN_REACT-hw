@@ -1,4 +1,4 @@
-## [link on project Fake store](https://sl101.github.io/TEL-RAN_REACT-hw)
+## [link on project Fake store](https://sl101.github.io/TelRan-fake-store)
 
 ## Задача:
 

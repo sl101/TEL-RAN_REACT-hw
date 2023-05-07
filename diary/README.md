@@ -1,4 +1,4 @@
-## [link on project Diary](https://sl101.github.io/TEL-RAN_REACT-hw)
+## [link on project Diary](https://sl101.github.io/TelRan-diary)
 
 ## Задача:
 
