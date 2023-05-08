@@ -1,0 +1,47 @@
+.btn_wrapper {
+	position: relative;
+	padding: 4px 15px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+
+	border: .5px solid var(--fantom-color);
+	border-radius: 6px;
+
+	background-color: var(--light-color);
+	box-shadow: 4px 4px 5px var(--fantom-color);
+
+	cursor: pointer;
+	transition: background-color var(--hover-time) ease, border-color var(--hover-time) ease;
+
+}
+
+.btn_wrapper button {
+	font-weight: 500;
+	font-size: 22px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn_wrapper svg {
+	font-weight: 500;
+	font-size: 22px;
+	outline: none;
+	cursor: pointer;
+}
+
+@media (min-width: 672px) {
+	.btn_wrapper:hover {
+		background-color: var(--accent-color);
+		border-color: var(--accent-color);
+	}
+
+	.btn_wrapper:active {
+		top: 1px;
+		box-shadow: 0 0 5px var(--black-color);
+	}
+
+}
